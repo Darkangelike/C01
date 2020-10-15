@@ -1,0 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: itieu <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/15 19:16:18 by itieu             #+#    #+#             */
+/*   Updated: 2020/10/15 21:05:30 by itieu            ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <unistd.h>
+#include <stdio.h>
+
+void	ft_putchar(int c)
+{
+	write(1, &c, 1);
+}
+
+int	ft_strlen(char *str)
+{
+	int index;
+
+	index = 0;
+	while (str[index] != '\0')
+	{
+		index++;
+	}
+
+	return (index);
+}
+
+int main()
+{
+	char str1[] = "Hello";
+	printf("%d\n", ft_strlen(str1));
+	return (0);
+}
